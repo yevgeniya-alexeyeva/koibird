@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>koibird</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+    integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="./css/main.min.css">
+</head>
+
+<body>
+  <!--header start-->
+  <header class="header">
+    <div class="container">
+      <div class="row">
+        <div class="search">
+          <button class="search__button" type="submit"></button>
+          <input class="search__input" type="text">
+        </div>
+        <a class="logo" href="./index.html">
+          <img width="100%" srcset="images/logo.png 1x, images/logo@2x.png 2x" src="./images/logo.png" alt="logo" /></a>
+        <div class="user-block">
+          <ul class="account-block">
+            <li><a class="account-block__register" href="">Register</a></li>
+            <li><a class="account-block__account" href="">My Account</a></li>
+          </ul>
+          <ul class="bag-wish-block">
+            <li class="bag-wish-block__item"><a class="bag-wish-block__link" href=""><svg width="24px"
+                  class="bag-wish-block__icon" width="13" height="19">
+                  <use href="./images/svg/sprite.svg#wishlist-icon"></use>
+                </svg></a></li>
+            <li class="bag-wish-block__item"><a class=bag-wish-block__link href=""><svg width="24px"
+                  class="bag-wish-block__icon" width="13" height="19">
+                  <use href="./images/svg/sprite.svg#shopping-bag"></use>
+                </svg></a></li>
+          </ul>
+        </div>
+      </div>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item">SHOP BY CATEGORY</li>
+          <li class="nav__item">SHOP BY BRAND</li>
+          <li class="nav__item">SHOP BY COLLECTION</li>
+          <li class="nav__item">ABOUT KOIBIRD</li>
+          <li class="nav__item">POP-UP SHOP</li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="header-placeholder"></div>
+  <!--header end-->
+  <!--hero start-->
+  <section class="hero">
+    <div class="hero__logo">
+      <img width="100%" srcset="images/logo-image.png 1x, images/logo-image@2x.png 2x" src="./images/logo-image.png"
+        alt="logo" />
+      <img class="outline" width="100%" srcset="images/banner-logo.png 1x, images/banner-logo@2x.png 2x"
+        src="./images/banner-logo.png" alt="logo" />
+    </div>
+    <div class="hero__slogan">
+      <p class="slogan">BEAUTY AND THE PISTE</p>
+      <svg class="slogan-icon" width="21" height="24">
+        <use href="./images/svg/sprite.svg#hero-arrow"></use>
+      </svg>
+    </div>
+  </section>
+  <!--hero end-->
+  <!--title start-->
+  <section class="title-section">
+    <h1 class="main-title">WHAT WE ARE SHOPPING NOW</h1>
+  </section>
+  <!--title end-->
+  <!--new in start-->
+  <section class="new-in"></section>
+  <!--new in end-->
+  <!--categories start-->
+  <section class="categories">
+    <ul class="categories__list container">
+      <li class="categories__item">
+        <a href="#" class="categories__link">
+          <img srcset="./images/mask-group-1.png 1x, ./images/mask-group-1.png 2x" src="./images/mask-group-1.png"
+            alt="category image" class="categories__img">
+          </img>
+          <div class="categories__overlay">
+            <div class="categories__descr">
+              <p class="categories__name">OUTERWEAR</p>
+              <p class="categories__plea">shop now</p>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="categories__item">
+        <a href="" class="categories__link">
+          <img srcset="./images/mask-group-2.png 1x, ./images/mask-group-2.png 2x" src="./images/mask-group-2.png"
+            alt="category image" class="categories__img">
+          </img>
+          <div class="categories__overlay">
+            <div class="categories__descr">
+              <p class="categories__name">SKIS</p>
+              <p class="categories__plea">shop now</p>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="categories__item">
+        <a href="" class="categories__link">
+          <img srcset="./images/mask-group-3.png 1x, ./images/mask-group-3.png 2x" src="./images/mask-group-3.png"
+            alt="category image" class="categories__img">
+          </img>
+          <div class="categories__overlay">
+            <div class="categories__descr">
+              <p class="categories__name">KNITWEAR</p>
+              <p class="categories__plea">shop now</p>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="categories__item">
+        <a href="" class="categories__link">
+          <img srcset="./images/mask-group-4.png 1x, ./images/mask-group-4.png 2x" src="./images/mask-group-4.png"
+            alt="category image" class="categories__img">
+          </img>
+          <div class="categories__overlay">
+            <div class="categories__descr">
+              <p class="categories__name">ACCESSORIES</p>
+              <p class="categories__plea">shop now</p>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="categories__item">
+        <a href="" class="categories__link">
+          <img srcset="./images/mask-group-5.png 1x, ./images/mask-group-5.png 2x" src="./images/mask-group-5.png"
+            alt="category image" class="categories__img">
+          </img>
+          <div class="categories__overlay">
+            <div class="categories__descr">
+              <p class="categories__name">GOGGLES</p>
+              <p class="categories__plea">shop now</p>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="categories__item">
+        <a href="" class="categories__link">
+          <img srcset="./images/mask-group-6.png 1x, ./images/mask-group-6.png 2x" src="./images/mask-group-6.png"
+            alt="category image" class="categories__img">
+          </img>
+          <div class="categories__overlay">
+            <div class="categories__descr">
+              <p class="categories__name">JACKETS</p>
+              <p class="categories__plea">shop now</p>
+            </div>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </section>
+  <button class="wish-btn" type="button"></button>
+  <!--categories end-->
+  <!--best sellers start-->
+  <section class="best-sellers"></section>
+  <!--best sellers end-->
+  <!--gallery start-->
+  <section class="gallery">
+    <h2 class="gallery__title">#koiski</h2>
+    <ul class="gallery__list">
+      <li class="gallery__item">
+        <a href="" class="gallery__link">
+          <img srcset="./images/mask-group-7.png 1x, ./images/mask-group-7.png 2x" src="./images/mask-group-7.png"
+            alt="gallery image" class="gallery__img">
+          </img>
+          <div class="gallery__overlay">
+            <div class="gallery__descr">
+              <p class="gallery__plea">shop the look</p>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="gallery__item">
+        <a href="" class="gallery__link">
+          <img srcset="./images/mask-group-8.png 1x, ./images/mask-group-8.png 2x" src="./images/mask-group-8.png"
+            alt="gallery image" class="gallery__img">
+          </img>
+          <div class="gallery__overlay">
+            <div class="gallery__descr">
+              <p class="gallery__plea">shop the look</p>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="gallery__item">
+        <a href="" class="gallery__link">
+          <img srcset="./images/mask-group-9.png 1x, ./images/mask-group-9.png 2x" src="./images/mask-group-9.png"
+            alt="gallery image" class="gallery__img">
+          </img>
+          <div class="gallery__overlay">
+            <div class="gallery__descr">
+              <p class="gallery__plea">shop the look</p>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="gallery__item">
+        <a href="" class="gallery__link">
+          <img srcset="./images/mask-group-10.png 1x, ./images/mask-group-10.png 2x" src="./images/mask-group-10.png"
+            alt="gallery image" class="gallery__img">
+          </img>
+          <div class="gallery__overlay">
+            <div class="gallery__descr">
+              <p class="gallery__plea">shop the look</p>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="gallery__item">
+        <a href="" class="gallery__link">
+          <img srcset="./images/mask-group-11.png 1x, ./images/mask-group-11.png 2x" src="./images/mask-group-11.png"
+            alt="gallery image" class="gallery__img">
+          </img>
+          <div class="gallery__overlay">
+            <div class="gallery__descr">
+              <p class="gallery__plea">shop the look</p>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="gallery__item">
+        <a href="" class="gallery__link">
+          <img srcset="./images/mask-group-12.png 1x, ./images/mask-group-12.png 2x" src="./images/mask-group-12.png"
+            alt="gallery image" class="gallery__img">
+          </img>
+          <div class="gallery__overlay">
+            <div class="gallery__descr">
+              <p class="gallery__plea">shop the look</p>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="gallery__item">
+        <a href="" class="gallery__link">
+          <img srcset="./images/mask-group-13.png 1x, ./images/mask-group-13.png 2x" src="./images/mask-group-13.png"
+            alt="gallery image" class="gallery__img">
+          </img>
+          <div class="gallery__overlay">
+            <div class="gallery__descr">
+              <p class="gallery__plea">shop the look</p>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="gallery__item">
+        <a href="" class="gallery__link">
+          <img srcset="./images/mask-group-14.png 1x, ./images/mask-group-14.png 2x" src="./images/mask-group-14.png"
+            alt="gallery image" class="gallery__img">
+          </img>
+          <div class="gallery__overlay">
+            <div class="gallery__descr">
+              <p class="gallery__plea">shop the look</p>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="gallery__item">
+        <a href="" class="gallery__link">
+          <img srcset="./images/mask-group-15.png 1x, ./images/mask-group-15.png 2x" src="./images/mask-group-15.png"
+            alt="gallery image" class="gallery__img">
+          </img>
+          <div class="gallery__overlay">
+            <div class="gallery__descr">
+              <p class="gallery__plea">shop the look</p>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="gallery__item">
+        <a href="" class="gallery__link">
+          <img srcset="./images/mask-group-16.png 1x, ./images/mask-group-16.png 2x" src="./images/mask-group-16.png"
+            alt="gallery image" class="gallery__img">
+          </img>
+          <div class="gallery__overlay">
+            <div class="gallery__descr">
+              <p class="gallery__plea">shop the look</p>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="gallery__item">
+        <a href="" class="gallery__link">
+          <img srcset="./images/mask-group-17.png 1x, ./images/mask-group-17.png 2x" src="./images/mask-group-17.png"
+            alt="gallery image" class="gallery__img">
+          </img>
+          <div class="gallery__overlay">
+            <div class="gallery__descr">
+              <p class="gallery__plea">shop the look</p>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="gallery__item">
+        <a href="" class="gallery__link">
+          <img srcset="./images/mask-group-18.png 1x, ./images/mask-group-18.png 2x" src="./images/mask-group-18.png"
+            alt="gallery image" class="gallery__img">
+          </img>
+          <div class="gallery__overlay">
+            <div class="gallery__descr">
+              <p class="gallery__plea">shop the look</p>
+            </div>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </section>
+  <!--gallery end-->
+  <!--footer start-->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__wrapper">
+        <div class="footer__nav">
+          <a href="#">
+            <img class="footer__logo" width="100%" srcset="images/logo.png 1x, images/logo@2x.png 2x"
+              src="./images/logo.png" alt="logo" /></a>
+          <div class="footer-nav">
+            <ul class="footer-nav__list">
+              <li class="footer-nav__item"><a href="" class="footer-nav__link">ABOUT</a></li>
+              <li class="footer-nav__item"><a href="" class="footer-nav__link">TERMS & CONDITIONS</a></li>
+              <li class="footer-nav__item"><a href="" class="footer-nav__link">PRIVACY POLICY</a></li>
+              <li class="footer-nav__item"><a href="" class="footer-nav__link">CONTACT US</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__form">
+          <form class="newsletter">
+            <label class="newsletter__label">SIGN UP FOR OUR NEWSLETTER</label>
+            <input class="newsletter__input" type="text">
+
+            <input class="newsletter__checkbox" id="checkbox" type="checkbox">
+            <label class="newsletter__checkbox-label" for="checkbox">GDPR tick box GDPR tick box GDPR tick box GDPR tick
+              box </label>
+
+            <button class="newsletter__button" type="submit">submit ></button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+  <!--footer end-->
+  <script src="./index.js"></script>
+  <script src="./script/js/slider.js"></script>
+</body>
+
+</html>

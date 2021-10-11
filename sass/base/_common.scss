@@ -1,0 +1,84 @@
+// html {
+//   scroll-behavior: smooth;
+// }
+
+body {
+  font-family: $font-family;
+  font-size: 16px;
+  letter-spacing: 0.07em;
+  color: $main-text-color;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+}
+
+.container {
+  padding-left: 142px;
+  padding-right: 142px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: $bp-mobile) {
+  .container {
+    width: 320px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media screen and (min-width: $bp-tablet) {
+  .container {
+    width: 768px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+@media screen and (min-width: $bp-laptop) {
+  .container {
+    width: 1200px;
+    padding-left: 142px;
+    padding-right: 142px;
+  }
+}
+@media screen and (min-width: $bp-desktop) {
+  .container {
+    width: 1920px;
+    padding-left: 142px;
+    padding-right: 142px;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px 1px 1px 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}

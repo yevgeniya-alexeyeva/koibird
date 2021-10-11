@@ -1,0 +1,22 @@
+{{#each this}}
+<li>
+    <div class="product">
+        <img class="product__image" width="100%" srcset="{{{this.productImgURL1x}}} 1x, {{{this.productImgURL2x}}} 2x" src="./{{{this.productImgURL1x}}}" alt="{{this.name}}"/>
+        <div class="product__descr-wrapper">
+            <p class="product__name">
+                {{this.name}}
+            </p>
+            <p class="product__brand">
+                {{this.brand}}
+            </p>
+            <p class="product__price">
+            &#163;{{this.price}}
+            </p>
+            <a class="product__link" href="">
+                shop now
+            </a>
+            <div class="product__underline"></div>
+        </div>
+    </div>
+</li>
+{{/each}}

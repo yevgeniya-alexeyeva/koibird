@@ -1,0 +1,296 @@
+body {
+  font-family: "Work Sans", sans-serif;
+  font-size: 16px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  padding-left: 142px;
+  padding-right: 142px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 360px) {
+  .container {
+    width: 320px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .container {
+    width: 768px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+    padding-left: 142px;
+    padding-right: 142px;
+  }
+}
+
+@media screen and (min-width: 1636px) {
+  .container {
+    width: 1636px;
+    padding-left: 142px;
+    padding-right: 142px;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+.logo {
+  width: 125px;
+  height: 21px;
+}
+
+@media screen and (min-width: 767px) {
+  .logo {
+    width: 250px;
+    height: 42px;
+  }
+}
+
+@media screen and (min-width: 1636px) {
+  .logo {
+    width: 500px;
+    height: 84px;
+  }
+}
+
+.title {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.title__line {
+  width: 100%;
+  height: 5px;
+  background-color: #e0ff04;
+}
+
+.title__text {
+  position: absolute;
+  padding: 0 30px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #ffffff;
+  font-size: 22px;
+  text-transform: uppercase;
+}
+
+.btn-prev {
+  width: 46px;
+  height: 94px;
+  background-image: url("./images/angle-left.svg");
+  background-size: 20px 30px;
+}
+
+.header {
+  padding: 41px 0 27px;
+  width: 100%;
+  height: 200px;
+  position: fixed;
+  background-color: #ffffff;
+  z-index: 10;
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  width: 214px;
+  border-bottom: solid 1px;
+}
+
+.search__button {
+  width: 30px;
+  height: 30px;
+  border: none;
+  background-color: inherit;
+  background-image: url("../images/svg/search-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px 20px;
+}
+
+.search__input {
+  display: block;
+  outline: none;
+  border: none;
+  width: 184px;
+  background-color: transparent;
+}
+
+.user-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.account-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 12px;
+}
+
+.account-block__register {
+  border-right: solid 1px;
+  padding-right: 10px;
+}
+
+.account-block__account {
+  padding-left: 10px;
+}
+
+.bag-wish-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.bag-wish-block__item:not(first-child) {
+  margin-left: 32px;
+}
+
+.nav {
+  margin: 28px auto 0;
+  width: 1246px;
+  text-transform: uppercase;
+}
+
+.nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header-placeholder {
+  height: 200px;
+}
+
+.hero {
+  height: 930px;
+  padding-top: 333px;
+  padding-right: 20vw;
+  background-image: url("../images/hero-bg.jpg");
+  background-position: left top;
+  background-size: cover;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min-device-pixel-ratio: 1.5) {
+  .hero {
+    background-image: url("../images/hero-bg@2x.jpg");
+  }
+}
+
+.hero__logo {
+  position: relative;
+  text-align: right;
+  margin-left: auto;
+  width: 765px;
+  height: 126px;
+}
+
+.hero__slogan {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 22px;
+  margin-left: auto;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  color: #ffffff;
+}
+
+.slogan-icon {
+  margin-left: 21px;
+}
+
+.outline {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.title-section {
+  height: 112px;
+  padding-top: 38px;
+  padding-bottom: 44px;
+  background-color: #e0ff04;
+}
+
+.main-title {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+  font-size: 22px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.new-in {
+  margin-top: 122px;
+}
+/*# sourceMappingURL=main.css.map */

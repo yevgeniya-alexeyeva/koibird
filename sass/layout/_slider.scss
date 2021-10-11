@@ -1,0 +1,101 @@
+//sections
+.new-in,
+.best-sellers {
+  margin-top: 122px;
+}
+//--buttons--
+.btn-prev,
+.btn-next {
+  width: 46px;
+  height: 100%px;
+  border: none;
+  background-color: transparent;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 28px 49px;
+}
+
+.btn-prev {
+  background-image: url("../images/svg/angle-left.svg");
+  margin-right: 20px;
+}
+
+.btn-next {
+  background-image: url("../images/svg/angle-right.svg");
+  margin-left: 20px;
+}
+
+//--slider--
+.new-in__wrapper,
+.best-sellers__wrapper {
+  display: flex;
+  margin-top: 73px;
+  padding: 0 106px;
+  width: 100%;
+}
+
+.new-in__slider,
+.best-sellers__slider {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  width: 100%;
+}
+
+//--card--
+.product {
+  position: relative;
+  width: 394px;
+  height: 367px;
+  &::not(:last-child) {
+    margin-right: 40px;
+  }
+}
+
+.product__descr-wrapper {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.product__name {
+  text-transform: uppercase;
+}
+
+.product__brand {
+  color: $secondary-text-color;
+}
+
+.product__plea {
+  text-transform: uppercase;
+}
+
+.product__underline {
+  margin: 5px auto 0;
+  width: 95px;
+  height: 2px;
+  background-color: $accent-color;
+}
+.product__image {
+  display: block;
+  max-height: 75%;
+  margin: 0 auto;
+}
+
+.wish-btn {
+  width: 20px;
+  height: 20px;
+  display: block;
+  margin-left: auto;
+  border: none;
+  background-color: inherit;
+  background-image: url("../images/svg/heart-regular.svg");
+  background-size: 15px 15px;
+  background-position: center;
+  background-repeat: no-repeat;
+  &:hover {
+    background-image: url("../images/svg/heart-solid.svg");
+  }
+}

@@ -1,0 +1,12 @@
+.logo {
+  width: 125px;
+  height: 21px;
+  @media screen and (min-width: $bp-tablet) {
+    width: 250px;
+    height: 42px;
+  }
+  @media screen and (min-width: $bp-desktop) {
+    width: 500px;
+    height: 84px;
+  }
+}

@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Work Sans", sans-serif;
   font-size: 16px;
@@ -36,8 +40,8 @@ a {
 @media screen and (min-width: 1200px) {
   .container {
     width: 1200px;
-    padding-left: 142px;
-    padding-right: 142px;
+    padding-left: 100px;
+    padding-right: 100px;
   }
 }
 
@@ -82,25 +86,6 @@ p {
   overflow: hidden;
 }
 
-.logo {
-  width: 125px;
-  height: 21px;
-}
-
-@media screen and (min-width: 767px) {
-  .logo {
-    width: 250px;
-    height: 42px;
-  }
-}
-
-@media screen and (min-width: 1636px) {
-  .logo {
-    width: 500px;
-    height: 84px;
-  }
-}
-
 .title {
   position: relative;
   display: -webkit-box;
@@ -142,16 +127,57 @@ p {
   z-index: 10;
 }
 
-.row {
+.header-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  height: 100%;
+}
+
+.row {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100%;
+}
+
+.logo {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 125px;
+  height: 21px;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+}
+
+@media screen and (min-width: 767px) {
+  .logo {
+    width: 250px;
+    height: 42px;
+  }
+}
+
+@media screen and (min-width: 1636px) {
+  .logo {
+    width: 500px;
+    height: 84px;
+  }
+}
+
+.sticky {
+  height: 93px;
 }
 
 .search {
@@ -186,6 +212,7 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-left: auto;
 }
 
 .account-block {
@@ -219,8 +246,8 @@ p {
 }
 
 .nav {
-  margin: 28px auto 0;
-  width: 1246px;
+  margin: 0 auto;
+  width: 100%;
   text-transform: uppercase;
 }
 
@@ -231,6 +258,26 @@ p {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.brand-link {
+  position: relative;
+}
+
+.brand-list {
+  position: absolute;
+  bottom: -100;
+  left: 0;
+  padding: 50px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (250px)[2];
+      grid-template-columns: repeat(2, 250px);
+  background-color: #ffffff;
+}
+
+.brand-list__item {
+  padding: 13px 0;
 }
 
 .header-placeholder {

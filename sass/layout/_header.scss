@@ -6,11 +6,41 @@
   background-color: $background-color;
   z-index: 10;
 }
-.row {
+.header-wrapper {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  height: 100%;
 }
+
+.row {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.logo {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 125px;
+  height: 21px;
+  transform: translate(-50%);
+  @media screen and (min-width: $bp-tablet) {
+    width: 250px;
+    height: 42px;
+  }
+  @media screen and (min-width: $bp-desktop) {
+    width: 500px;
+    height: 84px;
+  }
+}
+
+.sticky {
+  height: 93px;
+}
+
 .search {
   display: flex;
   position: relative;
@@ -37,6 +67,7 @@
 
 .user-block {
   display: flex;
+  margin-left: auto;
 }
 
 .account-block {
@@ -55,14 +86,15 @@
 
 .bag-wish-block {
   display: flex;
+
   &__item:not(first-child) {
     margin-left: 32px;
   }
 }
 
 .nav {
-  margin: 28px auto 0;
-  width: 1246px;
+  margin: 0 auto;
+  width: 100%;
   text-transform: uppercase;
   &__list {
     display: flex;
@@ -70,6 +102,25 @@
   }
 }
 
+.brand-link {
+  position: relative;
+}
+.brand-list {
+  position: absolute;
+  bottom: -100;
+  left: 0;
+  padding: 50px;
+  display: grid;
+  grid-template-columns: repeat(2, 250px);
+  background-color: $background-color;
+  &__item {
+    padding: 13px 0;
+  }
+}
+
 .header-placeholder {
   height: 200px;
+}
+
+@media screen and (min-width: 1200px) {
 }

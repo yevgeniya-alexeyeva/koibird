@@ -17,17 +17,17 @@
 
 <body>
   <!--header start-->
-  <header class="header">
-    <div class="container">
+  <header id="header" class="header">
+    <div class="header-wrapper container">
       <div class="row">
-        <div class="search">
+        <div id="search" class="search">
           <button class="search__button" type="submit"></button>
           <input class="search__input" type="text">
         </div>
-        <a class="logo" href="./index.html">
+        <a id="logo" class="logo" href="./index.html">
           <img width="100%" srcset="images/logo.png 1x, images/logo@2x.png 2x" src="./images/logo.png" alt="logo" /></a>
         <div class="user-block">
-          <ul class="account-block">
+          <ul id="account-block" class="account-block">
             <li><a class="account-block__register" href="">Register</a></li>
             <li><a class="account-block__account" href="">My Account</a></li>
           </ul>
@@ -46,12 +46,15 @@
       <nav class="nav">
         <ul class="nav__list">
           <li class="nav__item">SHOP BY CATEGORY</li>
-          <li class="nav__item">SHOP BY BRAND</li>
+          <li id="brands" class="nav__item brand-link">SHOP BY BRAND<ul class="brand-list visually-hidden"
+              id="brand-list"></ul>
+          </li>
           <li class="nav__item">SHOP BY COLLECTION</li>
           <li class="nav__item">ABOUT KOIBIRD</li>
           <li class="nav__item">POP-UP SHOP</li>
         </ul>
       </nav>
+
     </div>
   </header>
   <div class="header-placeholder"></div>
@@ -355,6 +358,8 @@
   <!--footer end-->
   <script src="./index.js"></script>
   <script src="./script/js/slider.js"></script>
+  <script src="./script/js/brand-list.js"></script>
+  <script src="./script/js/sticky-header.js"></script>
 </body>
 
 </html>

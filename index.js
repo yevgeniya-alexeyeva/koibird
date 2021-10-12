@@ -1,18 +1,47 @@
-// import productCard from "./script/templates/product-card";
-// import Slider from "./script/js/slider";
-// import { newInList } from "./script/utils/new-in-list";
+const elements = {
+  menuBtn: document.getElementById("menu-button"),
+  closeBtn: document.getElementById("close-button"),
+  row: document.getElementById("row"),
+  nav: document.getElementById("nav"),
+  overlay: document.getElementById("overlay"),
+};
 
-// const newInSliderWrapper = document.querySelector(".new-in__slider");
+const refs = {
+  menuBtn: document.querySelector(".menu-button"),
+  closeBtn: document.querySelector(".close-button"),
+};
 
-// let itemsCountForShow = 4;
+const mql = window.matchMedia("(max-width: 767px)");
+switchMenu();
+mql.onchange = () => {
+  switchMenu();
+};
 
-// const newInSlider = new Slider(newInList, newInSliderWrapper, productCard);
+function switchMenu() {
+  if (elements.closeBtn.classList.contains("visually-hidden") && mql.matches) {
+    elements.row.classList.add("visually-hidden");
+    elements.nav.classList.add("visually-hidden");
+  } else {
+    elements.row.classList.remove("visually-hidden");
+    elements.nav.classList.remove("visually-hidden");
+  }
+}
 
-// // newInSlider.addSlides(itemsCountForShow);
-// const img = document.createElement("img");
-// img.src = "./images/new-in-1@2x.png";
-// // newInSliderWrapper.insertAdjacentElement('beforebegin', img);
+const showMenu = () => {
+  elements.menuBtn.classList.add("visually-hidden");
+  elements.closeBtn.classList.remove("visually-hidden");
+  elements.row.classList.remove("visually-hidden");
+  elements.nav.classList.remove("visually-hidden");
+  elements.overlay.classList.remove("visually-hidden");
+};
 
-// window.addEventListener("load", () =>
-//   newInSliderWrapper.insertAdjacentElement("beforebegin", img)
-// );
+const hideMenu = () => {
+  elements.menuBtn.classList.remove("visually-hidden");
+  elements.closeBtn.classList.add("visually-hidden");
+  elements.row.classList.add("visually-hidden");
+  elements.nav.classList.add("visually-hidden");
+  elements.overlay.classList.add("visually-hidden");
+};
+
+refs.menuBtn.addEventListener("click", showMenu);
+refs.closeBtn.addEventListener("click", hideMenu);

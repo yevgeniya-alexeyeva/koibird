@@ -1,13 +1,17 @@
 //sections
 .new-in,
 .best-sellers {
-  margin-top: 122px;
+  margin-top: 72px;
+  width: 100%;
+  @media screen and (min-width: $bp-laptop) {
+    margin-top: 122px;
+  }
 }
 //--buttons--
 .btn-prev,
 .btn-next {
   width: 46px;
-  height: 100%px;
+  height: 100px;
   border: none;
   background-color: transparent;
 
@@ -30,9 +34,20 @@
 .new-in__wrapper,
 .best-sellers__wrapper {
   display: flex;
-  margin-top: 73px;
-  padding: 0 106px;
-  width: 100%;
+  align-items: center;
+  margin: 50px auto 0;
+  padding: 0 20px;
+  width: 360px;
+  @media screen and (min-width: $bp-tablet) {
+    width: 768px;
+  }
+  @media screen and (min-width: $bp-laptop) {
+    margin: 73px auto 0;
+    width: 1200px;
+  }
+  @media screen and (min-width: $bp-desktop) {
+    width: 1920px;
+  }
 }
 
 .new-in__slider,
@@ -43,45 +58,63 @@
   width: 100%;
 }
 
-//--card--
 .product {
   position: relative;
-  width: 394px;
-  height: 367px;
+
+  width: 230px;
+  height: 245px;
   &::not(:last-child) {
     margin-right: 40px;
   }
-}
 
-.product__descr-wrapper {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
-}
-
-.product__name {
-  text-transform: uppercase;
-}
-
-.product__brand {
-  color: $secondary-text-color;
-}
-
-.product__plea {
-  text-transform: uppercase;
-}
-
-.product__underline {
-  margin: 5px auto 0;
-  width: 95px;
-  height: 2px;
-  background-color: $accent-color;
-}
-.product__image {
-  display: block;
-  max-height: 75%;
-  margin: 0 auto;
+  &__descr-wrapper {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+  }
+  &__name {
+    text-transform: uppercase;
+  }
+  &__brand {
+    color: $secondary-text-color;
+  }
+  &__plea {
+    text-transform: uppercase;
+  }
+  &__underline {
+    margin: 5px auto 0;
+    width: 95px;
+    height: 2px;
+    background-color: $accent-color;
+  }
+  &__image {
+    display: block;
+    max-width: 100%;
+    max-height: 65%;
+    margin: 0 auto;
+  }
+  @media screen and (min-width: $bp-tablet) {
+    width: 210px;
+    height: 232px;
+  }
+  @media screen and (min-width: $bp-laptop) {
+    width: 226px;
+    height: 240px;
+    &__descr-wrapper {
+      font-size: 14px;
+    }
+  }
+  @media screen and (min-width: $bp-desktop) {
+    width: 394px;
+    height: 367px;
+    &__descr-wrapper {
+      font-size: 16px;
+    }
+    &__image {
+      max-height: 75%;
+    }
+  }
 }
 
 .wish-btn {
@@ -95,7 +128,8 @@
   background-size: 15px 15px;
   background-position: center;
   background-repeat: no-repeat;
-  &:hover {
+  &:hover,
+  &:focus {
     background-image: url("../images/svg/heart-solid.svg");
   }
 }

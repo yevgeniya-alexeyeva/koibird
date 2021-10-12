@@ -1,6 +1,9 @@
 .categories {
   width: 100%;
-  margin-top: 100px;
+  margin: 50px auto 0;
+  @media screen and (min-width: $bp-laptop) {
+    margin: 100px auto 0;
+  }
 }
 
 .categories__list {
@@ -11,13 +14,34 @@
 //--card
 .categories__item {
   position: relative;
-  width: 532px;
-  height: 532px;
-  &:not(:nth-child(3n)) {
-    margin-right: 20px;
+  width: 360px;
+  height: 360px;
+  &:not(:last-child) {
+    margin-bottom: 5px;
   }
-  &:nth-child(n + 4) {
-    margin-top: 20px;
+  @media screen and (min-width: $bp-tablet) {
+    width: 222px;
+    height: 222px;
+    &:not(:nth-child(3n)) {
+      margin-right: 10px;
+    }
+    &:nth-child(n + 4) {
+      margin-top: 10px;
+    }
+  }
+  @media screen and (min-width: $bp-laptop) {
+    width: 326px;
+    height: 326px;
+  }
+  @media screen and (min-width: $bp-desktop) {
+    width: 532px;
+    height: 532px;
+    &:not(:nth-child(3n)) {
+      margin-right: 20px;
+    }
+    &:nth-child(n + 4) {
+      margin-top: 20px;
+    }
   }
 }
 
@@ -40,7 +64,16 @@
 .categories__name {
   text-transform: uppercase;
   color: $light-text-color;
-  font-size: 50px;
+  font-size: 40px;
+  @media screen and (min-width: $bp-tablet) {
+    font-size: 27px;
+  }
+  @media screen and (min-width: $bp-laptop) {
+    font-size: 39px;
+  }
+  @media screen and (min-width: $bp-desktop) {
+    font-size: 50px;
+  }
 }
 
 .categories__plea {

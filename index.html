@@ -19,31 +19,35 @@
   <!--header start-->
   <header id="header" class="header">
     <div class="header-wrapper container">
-      <div class="row">
+      <button id="menu-button" class="menu-button" type="button" aria-label="show mobile menu"></button>
+      <button id="close-button" class="close-button visually-hidden" type="button"
+        aria-label="close mobile menu"></button>
+      <a id="logo" class="logo" href="./index.html">
+        <img width="100%" srcset="images/logo.png 1x, images/logo@2x.png 2x" src="./images/logo.png" alt="logo" /></a>
+
+      <div id="row" class="row">
         <div id="search" class="search">
           <button class="search__button" type="submit"></button>
           <input class="search__input" type="text">
         </div>
-        <a id="logo" class="logo" href="./index.html">
-          <img width="100%" srcset="images/logo.png 1x, images/logo@2x.png 2x" src="./images/logo.png" alt="logo" /></a>
         <div class="user-block">
           <ul id="account-block" class="account-block">
-            <li><a class="account-block__register" href="">Register</a></li>
-            <li><a class="account-block__account" href="">My Account</a></li>
+            <li class="account-block__register"><a href="">Register</a></li>
+            <li class="account-block__account"><a href="">My Account</a></li>
           </ul>
           <ul class="bag-wish-block">
-            <li class="bag-wish-block__item"><a class="bag-wish-block__link" href=""><svg width="24px"
-                  class="bag-wish-block__icon" width="13" height="19">
+            <li class="bag-wish-block__item"><a class="bag-wish-block__link" href="">
+                <svg width="24" class="bag-wish-block__icon" height="19">
                   <use href="./images/svg/sprite.svg#wishlist-icon"></use>
                 </svg></a></li>
-            <li class="bag-wish-block__item"><a class=bag-wish-block__link href=""><svg width="24px"
-                  class="bag-wish-block__icon" width="13" height="19">
+            <li class="bag-wish-block__item"><a class=bag-wish-block__link href=""><svg width="24"
+                  class="bag-wish-block__icon" height="19">
                   <use href="./images/svg/sprite.svg#shopping-bag"></use>
                 </svg></a></li>
           </ul>
         </div>
       </div>
-      <nav class="nav">
+      <nav id="nav" class="nav">
         <ul class="nav__list">
           <li class="nav__item">SHOP BY CATEGORY</li>
           <li id="brands" class="nav__item brand-link">SHOP BY BRAND<ul class="brand-list visually-hidden"
@@ -57,7 +61,7 @@
 
     </div>
   </header>
-  <div class="header-placeholder"></div>
+  <div id="placeholder" class="header-placeholder"></div>
   <!--header end-->
   <!--hero start-->
   <section class="hero">
@@ -166,7 +170,6 @@
       </li>
     </ul>
   </section>
-  <button class="wish-btn" type="button"></button>
   <!--categories end-->
   <!--best sellers start-->
   <section class="best-sellers"></section>
@@ -353,8 +356,8 @@
         </div>
       </div>
     </div>
-
   </footer>
+  <div id="overlay" class="overlay visually-hidden"></div>
   <!--footer end-->
   <script src="./index.js"></script>
   <script src="./script/js/slider.js"></script>

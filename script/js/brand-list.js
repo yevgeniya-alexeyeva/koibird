@@ -28,7 +28,7 @@ const brandList = [
 
 const addMarkup = (list) => {
   return list.reduce((acc, item) => {
-    return (acc += `<li class="brand-list__item">${item}</li>`);
+    return (acc += `<li class="brand-list__item"><a class="brand-list__link" href="#">${item}</a></li>`);
   }, "");
 };
 

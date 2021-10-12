@@ -1,5 +1,7 @@
-const newIn = document.querySelector(".new-in");
-const bestSellers = document.querySelector(".best-sellers");
+const slideRefs = {
+  newIn: document.querySelector(".new-in"),
+  bestSellers: document.querySelector(".best-sellers"),
+};
 
 const newInProducts = [
   {
@@ -63,8 +65,21 @@ const bestSellersProducts = [
   },
 ];
 
+let newInFirstSlide = 0;
+let bestSellFirstSlide = 0;
+let newInAmount = 4;
+let bestSellAmount = 4;
+
+const tablet = window.matchMedia("(max-width: 1199px) and (min-width: 767px)");
+const mobile = window.matchMedia("(max-width: 768px)");
+const laptop = window.matchMedia("(min-width: 1200px)");
+
 const createCard = (items, sectionName, title) => {
-  const list = items.reduce((acc, item) => {
+  const slides =
+    sectionName === "new-in"
+      ? items.slice(newInFirstSlide, newInFirstSlide + newInAmount)
+      : items.slice(bestSellFirstSlide, bestSellFirstSlide + bestSellAmount);
+  const list = slides.reduce((acc, item) => {
     return (acc += `<li>
         <div class="product">
         <img class="product__image" srcset="${item.productImgURL1x} 1x, ${item.productImgURL2x} 2x" src="./${item.productImgURL1x}" alt="${item.name}"/>
@@ -99,11 +114,132 @@ const createCard = (items, sectionName, title) => {
     </div>`;
 };
 
-newIn.insertAdjacentHTML(
-  "beforeend",
-  createCard(newInProducts, "new-in", "new in")
-);
-bestSellers.insertAdjacentHTML(
-  "beforeend",
-  createCard(bestSellersProducts, "best-sellers", "best sellers")
-);
+const fillSliders = (num) => {
+  newInAmount = num;
+  bestSellAmount = num;
+  slideRefs.newIn.innerHTML = createCard(newInProducts, "new-in", "new in");
+  slideRefs.bestSellers.innerHTML = createCard(
+    bestSellersProducts,
+    "best-sellers",
+    "best sellers"
+  );
+};
+
+(function showSliders() {
+  if (mobile.matches) {
+    newInFirstSlide = 0;
+    bestSellFirstSlide = 0;
+    fillSliders(1);
+  } else if (tablet.matches) {
+    newInFirstSlide = 0;
+    bestSellFirstSlide = 0;
+    fillSliders(3);
+  } else if (laptop.matches) {
+    newInFirstSlide = 0;
+    bestSellFirstSlide = 0;
+    fillSliders(4);
+  }
+})();
+
+mobile.onchange = () => {
+  if (mobile.matches) {
+    newInFirstSlide = 0;
+    bestSellFirstSlide = 0;
+    fillSliders(1);
+  }
+};
+
+tablet.onchange = () => {
+  if (tablet.matches) {
+    newInFirstSlide = 0;
+    bestSellFirstSlide = 0;
+    fillSliders(3);
+  }
+};
+
+laptop.onchange = () => {
+  if (laptop.matches) {
+    newInFirstSlide = 0;
+    bestSellFirstSlide = 0;
+    fillSliders(4);
+  }
+};
+
+//list new
+
+const listNewLeft = (e) => {
+  if (e.target.classList.value === "new-in__btn-prev btn-prev") {
+    if (laptop.matches) return;
+    if (tablet.matches && newInFirstSlide > 0) {
+      newInFirstSlide--;
+      fillSliders(3);
+      return;
+    }
+
+    if (mobile.matches && newInFirstSlide > 0) {
+      newInFirstSlide--;
+      fillSliders(1);
+      return;
+    }
+  }
+};
+
+const listNewRight = (e) => {
+  if (e.target.classList.value === "new-in__btn-next btn-next") {
+    if (laptop.matches) return;
+    if (tablet.matches && newInFirstSlide === 0) {
+      newInFirstSlide++;
+      fillSliders(3);
+      return;
+    }
+    if (mobile.matches && newInFirstSlide < 3) {
+      newInFirstSlide++;
+      fillSliders(1);
+      return;
+    }
+  }
+};
+
+//list best
+const listBestLeft = (e) => {
+  if (e.target.classList.value === "best-sellers__btn-prev btn-prev") {
+    if (laptop.matches) return;
+    if (tablet.matches && bestSellFirstSlide > 0) {
+      bestSellFirstSlide--;
+      fillSliders(3);
+      return;
+    }
+
+    if (mobile.matches && bestSellFirstSlide > 0) {
+      bestSellFirstSlide--;
+      fillSliders(1);
+      console.log(
+        "🚀 ~ file: slider.js ~ line 176 ~ listNewLeft ~ newInFirstSlide",
+        bestSellFirstSlide
+      );
+      console.log(mobile.matches);
+      return;
+    }
+  }
+};
+
+const listBestRight = (e) => {
+  if (e.target.classList.value === "best-sellers__btn-next btn-next") {
+    if (laptop.matches) return;
+    if (tablet.matches && bestSellFirstSlide === 0) {
+      bestSellFirstSlide++;
+      fillSliders(3);
+      return;
+    }
+    if (mobile.matches && bestSellFirstSlide < 3) {
+      bestSellFirstSlide++;
+      fillSliders(1);
+      return;
+    }
+  }
+};
+
+slideRefs.newIn.addEventListener("click", (e) => listNewLeft(e));
+slideRefs.newIn.addEventListener("click", (e) => listNewRight(e));
+slideRefs.bestSellers.addEventListener("click", listBestLeft);
+slideRefs.bestSellers.addEventListener("click", listBestRight);

@@ -17,7 +17,10 @@
 
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 28px 49px;
+  background-size: 15px 35px;
+  @media screen and (min-width: $bp-tablet) {
+    background-size: 28px 49px;
+  }
 }
 
 .btn-prev {

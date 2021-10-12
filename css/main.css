@@ -437,13 +437,12 @@ p {
 
 .brand-list {
   position: absolute;
-  bottom: -100;
   left: 0;
-  padding: 50px;
+  padding-top: 20px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (250px)[2];
-      grid-template-columns: repeat(2, 250px);
+  -ms-grid-columns: (160px)[2];
+      grid-template-columns: repeat(2, 160px);
   background-color: #ffffff;
 }
 
@@ -453,6 +452,19 @@ p {
 
 .brand-list__link:hover, .brand-list__link:focus {
   border-bottom: solid 3px #e0ff04;
+}
+
+@media screen and (min-width: 768px) {
+  .brand-list {
+    padding: 50px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .brand-list {
+    -ms-grid-columns: (250px)[2];
+        grid-template-columns: repeat(2, 250px);
+  }
 }
 
 .overlay {
@@ -565,7 +577,14 @@ p {
   background-color: transparent;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 28px 49px;
+  background-size: 15px 35px;
+}
+
+@media screen and (min-width: 768px) {
+  .btn-prev,
+  .btn-next {
+    background-size: 28px 49px;
+  }
 }
 
 .btn-prev {

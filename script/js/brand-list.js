@@ -34,7 +34,7 @@ const addMarkup = (list) => {
 
 const showBrandList = () => {
   listElement.classList.remove("visually-hidden");
-  listRef.insertAdjacentHTML("beforeend", addMarkup(brandList));
+  listElement.innerHTML = addMarkup(brandList);
 };
 
 navLinkRef.addEventListener("mouseover", () => showBrandList());

@@ -214,11 +214,10 @@
 
 .brand-list {
   position: absolute;
-  bottom: -100;
   left: 0;
-  padding: 50px;
+  padding-top: 20px;
   display: grid;
-  grid-template-columns: repeat(2, 250px);
+  grid-template-columns: repeat(2, 160px);
   background-color: $background-color;
   &__item {
     padding: 13px 0;
@@ -226,6 +225,12 @@
   &__link:hover,
   &__link:focus {
     border-bottom: solid 3px $accent-color;
+  }
+  @media screen and (min-width: $bp-tablet) {
+    padding: 50px;
+  }
+  @media screen and (min-width: $bp-laptop) {
+    grid-template-columns: repeat(2, 250px);
   }
 }
 

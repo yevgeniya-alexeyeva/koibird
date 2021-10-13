@@ -82,6 +82,12 @@ p {
   margin: 0;
 }
 
+input,
+textarea,
+submit {
+  -webkit-appearance: none;
+}
+
 .visually-hidden {
   position: absolute !important;
   clip: rect(1px 1px 1px 1px);
@@ -401,6 +407,15 @@ p {
   margin-left: 32px;
 }
 
+.bag-wish-block__icon:focus, .bag-wish-block__icon:hover {
+  fill: #e0ff04;
+}
+
+.bag-wish-block__icon {
+  -webkit-transition: fill 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .nav {
   position: absolute;
   bottom: -250px;
@@ -451,7 +466,13 @@ p {
 }
 
 .brand-list__link:hover, .brand-list__link:focus {
-  border-bottom: solid 3px #e0ff04;
+  border-bottom-color: #e0ff04;
+}
+
+.brand-list__link {
+  border-bottom: solid 3px transparent;
+  -webkit-transition: border-bottom-color 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-bottom-color 300ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @media screen and (min-width: 768px) {
@@ -478,10 +499,10 @@ p {
 }
 
 .hero {
-  height: 930px;
+  height: 643px;
   width: 100%;
-  padding-top: 333px;
-  padding-right: 20vw;
+  padding-top: 260px;
+  padding-right: 5vw;
   background-image: url("../images/hero-bg.jpg");
   background-position: left top;
   background-size: cover;
@@ -498,20 +519,7 @@ p {
   position: relative;
   text-align: right;
   margin-left: auto;
-  width: 250px;
-  width: 360px;
-}
-
-@media screen and (min-width: 1200px) {
-  .hero__logo {
-    width: 500px;
-  }
-}
-
-@media screen and (min-width: 1920px) {
-  .hero__logo {
-    width: 765px;
-  }
+  width: 280px;
 }
 
 .hero__slogan {
@@ -521,12 +529,46 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 22px;
+  margin-top: 10px;
   margin-left: auto;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
   color: #ffffff;
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    height: 500px;
+    padding-top: 200px;
+    padding-right: 15vw;
+  }
+  .hero__logo {
+    width: 300px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    height: 725px;
+    padding-top: 300px;
+  }
+  .hero__logo {
+    width: 500px;
+  }
+  .hero__slogan {
+    margin-top: 22px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .hero {
+    height: 930px;
+    padding-top: 333px;
+  }
+  .hero__logo {
+    width: 765px;
+  }
 }
 
 .slogan-icon {
@@ -597,6 +639,12 @@ p {
   margin-left: 20px;
 }
 
+.btn-prev:hover,
+.btn-next:hover {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
 .new-in__wrapper,
 .best-sellers__wrapper {
   display: -webkit-box;
@@ -662,6 +710,11 @@ p {
   text-align: center;
 }
 
+.product__descr-wrapper:hover > .product__underline, .product__descr-wrapper:focus > .product__underline {
+  -webkit-transform: scaleX(100);
+          transform: scaleX(100);
+}
+
 .product__name {
   text-transform: uppercase;
 }
@@ -676,9 +729,13 @@ p {
 
 .product__underline {
   margin: 5px auto 0;
-  width: 95px;
+  width: 1px;
   height: 2px;
   background-color: #e0ff04;
+  -webkit-transition: -webkit-transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .product__image {
@@ -686,6 +743,11 @@ p {
   max-width: 100%;
   max-height: 65%;
   margin: 0 auto;
+}
+
+.product__image:focus, .product__image:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 @media screen and (min-width: 768px) {
@@ -719,6 +781,9 @@ p {
 }
 
 .wish-btn {
+  position: absolute;
+  bottom: 70px;
+  right: 0;
   width: 20px;
   height: 20px;
   display: block;
@@ -871,6 +936,8 @@ p {
   width: 100%;
   height: 100%;
   background-color: #00000049;
+  -webkit-transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .categories__overlay:hover, .categories__overlay:focus {
@@ -986,6 +1053,8 @@ p {
   left: 0;
   width: 100%;
   height: 100%;
+  -webkit-transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .gallery__overlay:hover, .gallery__overlay:focus {
@@ -1073,9 +1142,6 @@ p {
     margin-top: 50px;
     padding: 34px 0 71px;
   }
-}
-
-@media screen and (min-width: 1920px) {
   .footer__wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1091,6 +1157,7 @@ p {
 
 .footer-nav {
   margin-top: 52px;
+  width: 100%;
 }
 
 .footer-nav__item:not(:last-child) {
@@ -1106,6 +1173,18 @@ p {
   .footer-nav__item:not(:last-child) {
     margin-right: 50px;
     margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-nav {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .footer-nav {
+    width: 100%;
   }
 }
 
@@ -1148,8 +1227,8 @@ p {
   content: "";
   position: absolute;
   left: 0;
-  width: 15px;
-  height: 15px;
+  width: 17px;
+  height: 17px;
   border: none;
   background-color: #ffffff;
 }
@@ -1174,7 +1253,7 @@ p {
 
 @media screen and (min-width: 768px) {
   .newsletter__input {
-    width: 532px;
+    width: 450px;
     height: 45px;
   }
 }
@@ -1182,6 +1261,7 @@ p {
 @media screen and (min-width: 1920px) {
   .newsletter {
     margin-top: 0;
+    width: 532px;
   }
 }
 /*# sourceMappingURL=main.css.map */

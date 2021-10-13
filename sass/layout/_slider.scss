@@ -33,6 +33,11 @@
   margin-left: 20px;
 }
 
+.btn-prev:hover,
+.btn-next:hover {
+  transform: scale(0.8);
+}
+
 //--slider--
 .new-in__wrapper,
 .best-sellers__wrapper {
@@ -76,6 +81,12 @@
     width: 100%;
     text-align: center;
   }
+  &__descr-wrapper:hover,
+  &__descr-wrapper:focus {
+    & > .product__underline {
+      transform: scaleX(100);
+    }
+  }
   &__name {
     text-transform: uppercase;
   }
@@ -87,16 +98,23 @@
   }
   &__underline {
     margin: 5px auto 0;
-    width: 95px;
+    width: 1px;
     height: 2px;
     background-color: $accent-color;
+    @include transition(transform);
   }
+
   &__image {
     display: block;
     max-width: 100%;
     max-height: 65%;
     margin: 0 auto;
   }
+  &__image:focus,
+  &__image:hover {
+    transform: scale(1.1);
+  }
+
   @media screen and (min-width: $bp-tablet) {
     width: 210px;
     height: 232px;
@@ -121,6 +139,9 @@
 }
 
 .wish-btn {
+  position: absolute;
+  bottom: 70px;
+  right: 0;
   width: 20px;
   height: 20px;
   display: block;

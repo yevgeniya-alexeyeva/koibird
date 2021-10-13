@@ -103,4 +103,5 @@
   &:focus {
     background-color: $accent-color-transparent;
   }
+  @include transition(background-color);
 }

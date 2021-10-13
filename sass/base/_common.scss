@@ -76,6 +76,12 @@ p {
   margin: 0;
 }
 
+input,
+textarea,
+submit {
+  -webkit-appearance: none;
+}
+
 .visually-hidden {
   position: absolute !important;
   clip: rect(1px 1px 1px 1px);

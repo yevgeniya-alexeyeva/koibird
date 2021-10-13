@@ -83,6 +83,7 @@
     &:focus {
       background-color: $accent-color-transparent;
     }
+    @include transition(background-color);
   }
   @media screen and (min-width: $bp-tablet) {
     &__title {

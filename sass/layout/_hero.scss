@@ -1,8 +1,8 @@
 .hero {
-  height: 930px;
+  height: 643px;
   width: 100%;
-  padding-top: 333px;
-  padding-right: 20vw;
+  padding-top: 260px;
+  padding-right: 5vw;
   background-image: url("../images/hero-bg.jpg");
   @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
     only screen and (-moz-min-device-pixel-ratio: 1.5),
@@ -17,22 +17,41 @@
     position: relative;
     text-align: right;
     margin-left: auto;
-    width: 250px;
-    width: 360px;
-    @media screen and (min-width: $bp-laptop) {
-      width: 500px;
-    }
-    @media screen and (min-width: $bp-desktop) {
-      width: 765px;
-    }
+    width: 280px;
   }
   &__slogan {
     display: flex;
     align-items: center;
-    margin-top: 22px;
+    margin-top: 10px;
     margin-left: auto;
     width: max-content;
     color: $light-text-color;
+  }
+  @media screen and (min-width: $bp-tablet) {
+    height: 500px;
+    padding-top: 200px;
+    padding-right: 15vw;
+    &__logo {
+      width: 300px;
+    }
+  }
+  @media screen and (min-width: $bp-laptop) {
+    height: 725px;
+    padding-top: 300px;
+    &__logo {
+      width: 500px;
+    }
+
+    &__slogan {
+      margin-top: 22px;
+    }
+  }
+  @media screen and (min-width: $bp-desktop) {
+    height: 930px;
+    padding-top: 333px;
+    &__logo {
+      width: 765px;
+    }
   }
 }
 .slogan-icon {

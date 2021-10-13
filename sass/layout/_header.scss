@@ -150,6 +150,7 @@
   &__register {
     margin-bottom: 10px;
   }
+
   @media screen and (min-width: $bp-tablet) {
     text-align: right;
   }
@@ -182,6 +183,13 @@
   }
   &__item:not(:first-child) {
     margin-left: 32px;
+  }
+  &__icon:focus,
+  &__icon:hover {
+    fill: $accent-color;
+  }
+  &__icon {
+    @include transition(fill);
   }
 }
 
@@ -224,7 +232,11 @@
   }
   &__link:hover,
   &__link:focus {
-    border-bottom: solid 3px $accent-color;
+    border-bottom-color: $accent-color;
+  }
+  &__link {
+    border-bottom: solid 3px transparent;
+    @include transition(border-bottom-color);
   }
   @media screen and (min-width: $bp-tablet) {
     padding: 50px;

@@ -15,9 +15,6 @@
   @media screen and (min-width: $bp-laptop) {
     margin-top: 50px;
     padding: 34px 0 71px;
-  }
-
-  @media screen and (min-width: $bp-desktop) {
     &__wrapper {
       display: flex;
 
@@ -25,10 +22,20 @@
       align-items: flex-end;
     }
   }
+
+  @media screen and (min-width: $bp-desktop) {
+    // &__wrapper {
+    //   display: flex;
+
+    //   justify-content: space-between;
+    //   align-items: flex-end;
+    // }
+  }
 }
 
 .footer-nav {
   margin-top: 52px;
+  width: 100%;
 
   &__item:not(:last-child) {
     margin-bottom: 7px;
@@ -41,6 +48,12 @@
       margin-right: 50px;
       margin-bottom: 0;
     }
+  }
+  @media screen and (min-width: $bp-laptop) {
+    width: 50%;
+  }
+  @media screen and (min-width: $bp-desktop) {
+    width: 100%;
   }
 }
 
@@ -77,8 +90,8 @@
       content: "";
       position: absolute;
       left: 0;
-      width: 15px;
-      height: 15px;
+      width: 17px;
+      height: 17px;
       border: none;
       background-color: $light-text-color;
       .newsletter__checkbox:checked + & {
@@ -102,12 +115,13 @@
 
   @media screen and (min-width: $bp-tablet) {
     &__input {
-      width: 532px;
+      width: 450px;
       height: 45px;
     }
   }
 
   @media screen and (min-width: $bp-desktop) {
     margin-top: 0;
+    width: 532px;
   }
 }

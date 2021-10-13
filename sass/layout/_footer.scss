@@ -81,6 +81,9 @@
   &__checkbox-label {
     position: relative;
     display: inline-block;
+    width: 323px;
+    white-space: nowrap;
+    overflow: hidden;
     padding-left: 37px;
     margin-top: 10px;
     font-size: 12px;
@@ -94,12 +97,23 @@
       height: 17px;
       border: none;
       background-color: $light-text-color;
+      z-index: 2;
       .newsletter__checkbox:checked + & {
         background-image: url("../images/svg/check-solid.svg");
         background-repeat: no-repeat;
         background-position: center;
         background-size: 13px 13px;
       }
+    }
+    @media screen and (min-width: $bp-tablet) {
+      width: 450px;
+    }
+
+    .ticker {
+      display: inline-block;
+      padding-left: 100%;
+      -webkit-animation: marquee 10s infinite linear;
+      animation: marquee 10s infinite linear;
     }
   }
   &__button {
@@ -123,5 +137,22 @@
   @media screen and (min-width: $bp-desktop) {
     margin-top: 0;
     width: 532px;
+  }
+}
+
+@-webkit-keyframes marquee {
+  0% {
+    -webkit-transform: translate(0, 0);
+  }
+  100% {
+    -webkit-transform: translate(-100%, 0);
+  }
+}
+@keyframes marquee {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-100%, 0);
   }
 }
